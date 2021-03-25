@@ -32,7 +32,13 @@ buttons.forEach((button) =>{
       compScore.textContent = cScore
     }
     compMove.textContent = "Computer's last move"
-    compMove.textContent += "\n" + compPlay
+    if (compPlay === "paper"){
+      compMove.textContent += "\n 📃"
+    }else if (compPlay === "scissors"){
+      compMove.textContent += "\n ✂️"
+    }else{
+      compMove.textContent +="\n 🗿"
+    }
 
 
 

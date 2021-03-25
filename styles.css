@@ -4,21 +4,13 @@ body{
   text-align: center;
   font-family: sans-serif;
   background-color: #bb8082;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+
 }
 .Title{
   color: white;
-  grid-column: 1/12;
+
 
 }
-.userScore{
-  grid-column: 3/6;
-}
-.computerScore{
-  grid-column: 7/9;
-}
-
 button{
   font-size: 5rem;
   background-color: #bb8082;
@@ -31,14 +23,35 @@ button{
   grid-column: 1/12;
 }
 .lastMove{
+  margin-top: 2rem;
   grid-column: 1/12;
   grid-row: span 2;
+  font-size: 1.5rem;
+}
+.scores{
+  color: white;
+  font-size: 1.25rem;
+  margin: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-weight: 900;
+  display: inline-block;
 }
 
 button:hover{
   font-size: 6rem;
 }
+a{
+  text-decoration: none;
+}
 
 .gameEnd{
   font-size: 5rem;
+}
+footer{
+  color: white;
+  position:fixed;
+  bottom: 0;
+  margin:0;
+  width: 100%
 }
