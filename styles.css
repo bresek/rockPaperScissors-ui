@@ -3,12 +3,11 @@ body{
   margin:0;
   text-align: center;
   font-family: sans-serif;
+  background-color: #bb8082;
 }
 .Title{
-  background-color: #046582;
   color: white;
-  padding: 3rem;
-  width: 100%
+
 
 }
 
@@ -16,8 +15,6 @@ button{
   font-size: 5rem;
 }
 .moveSelection{
-  padding: 3rem;
-  background-color: #bb8082;
   display: flex;
   justify-content: center;
   grid-gap: 3rem;

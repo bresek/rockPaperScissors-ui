@@ -1,16 +1,37 @@
 // check if script is conncted
 console.log("Script connected!")
 
+
+let cScore = 0;
+let uScore = 0;
+
+
+
+// elements to manipulate
+userScore = document.querySelector("#uScore")
+compScore = document.querySelector("#cScore")
+
 //make butons interactive
+
 
 const buttons = document.querySelectorAll("button")
 console.log(buttons)
 buttons.forEach((button) =>{
   button.addEventListener("click",() =>{
-    console.log(playRound(button.id, computerPlay()))
+    round = (playRound(button.id, computerPlay()))
+    console.log(round)
+    if (round == 'win'){
+      uScore ++
+      userScore.textContent = uScore
+    }else if (round =='lose'){
+      cScore ++
+      compScore.textContent = cScore
+    }
+
   })
 })
 
+// Results display section
 
 
 
@@ -63,27 +84,4 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 
-}
-
-function game(rounds){
-  playerScore = 0;
-  computerScore = 0;
-  for (let i=0; i < rounds; i++){
-    playerMove = prompt("rock, paper, or scissors?")
-    computerMove = computerPlay()
-    result = playRound(playerMove, computerMove)
-    console.log(result + "! computer's move was " + computerMove)
-    if (result === "win"){
-      playerScore = playerScore + 1
-    }else if(result ="lose"){
-      computerScore = computerScore + 1
-    }
-  }
-  if (playerScore > computerScore){
-    return "You win the game! Score was:" + playerScore + "to" + computerScore
-  }else if (playerScore < computerScore) {
-    return "You lose the game! Score was:" + playerScore + "to" + computerScore
-  }else{
-    return "tie! Score was:" + playerScore + "to" + computerScore
-  }
 }
