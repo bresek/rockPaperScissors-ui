@@ -1,6 +1,19 @@
 // check if script is conncted
 console.log("Script connected!")
 
+//make butons interactive
+
+const buttons = document.querySelectorAll("button")
+console.log(buttons)
+buttons.forEach((button) =>{
+  button.addEventListener("click",() =>{
+    console.log(playRound(button.id, computerPlay()))
+  })
+})
+
+
+
+
 //define moves for game
 let moves = ["rock", "paper", "scissors"]
 
