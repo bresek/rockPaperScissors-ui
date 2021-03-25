@@ -8,21 +8,29 @@
   </head>
   <body>
     <div class="Title">
-      <h1>Rock Paper Scissors</h1>
+      <h1 id='title'>Score</h1>
     </div>
+    <div class="userScore">
+      you
+      <span id="uScore">
+      0
+      </span>
+    </div>
+    <div class="computerScore">
+      computer
+      <span id="cScore">0</span>
+    </div>
+
+
     <div class="moveSelection">
       <button type="button" id="rock"><i class="far fa-hand-rock"></i></button>
       <button type="button" id="paper"><i class="far fa-hand-paper"></i></button>
       <button type="button" id='scissors'><i class="far fa-hand-scissors"></i></button>
     </div>
-    <div class="results">
-      you
-      <span id="uScore">
-      0
-      </span>
-      computer
-      <span id="cScore">0</span>
+    <div class="lastMove">
+
     </div>
+
 
     <script src="index.js" charset="utf-8"></script>
   </body>

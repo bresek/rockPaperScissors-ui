@@ -4,18 +4,41 @@ body{
   text-align: center;
   font-family: sans-serif;
   background-color: #bb8082;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 .Title{
   color: white;
+  grid-column: 1/12;
 
-
+}
+.userScore{
+  grid-column: 3/6;
+}
+.computerScore{
+  grid-column: 7/9;
 }
 
 button{
   font-size: 5rem;
+  background-color: #bb8082;
+  border-style: none;
 }
 .moveSelection{
   display: flex;
   justify-content: center;
   grid-gap: 3rem;
+  grid-column: 1/12;
+}
+.lastMove{
+  grid-column: 1/12;
+  grid-row: span 2;
+}
+
+button:hover{
+  font-size: 6rem;
+}
+
+.gameEnd{
+  font-size: 5rem;
 }

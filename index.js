@@ -10,15 +10,19 @@ let uScore = 0;
 // elements to manipulate
 userScore = document.querySelector("#uScore")
 compScore = document.querySelector("#cScore")
+title = document.querySelector('#title')
+compMove = document.querySelector('.lastMove')
 
 //make butons interactive
 
 
 const buttons = document.querySelectorAll("button")
 console.log(buttons)
+
 buttons.forEach((button) =>{
   button.addEventListener("click",() =>{
-    round = (playRound(button.id, computerPlay()))
+    let compPlay = computerPlay()
+    round = (playRound(button.id, compPlay))
     console.log(round)
     if (round == 'win'){
       uScore ++
@@ -27,8 +31,21 @@ buttons.forEach((button) =>{
       cScore ++
       compScore.textContent = cScore
     }
+    compMove.textContent = "Computer's last move"
+    compMove.textContent += "\n" + compPlay
 
-  })
+
+
+    if (uScore === 5){
+      title.textContent = '🥳You win!🎈'
+      title.classList.add('gameEnd')
+    }else if (cScore === 5){
+      title.textContent = "😔You lose!😔"
+      title.classList.add('gameEnd')
+    }
+
+
+  })// end click function
 })
 
 // Results display section
